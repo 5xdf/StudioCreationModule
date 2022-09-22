@@ -22,12 +22,13 @@ for i = 1,loopamount do
   --(uncomment and remove this text if you are using a text label) script.Parent.Text = ""..hours..":"..minutes..":"..seconds..""
   print(""..hours..":"..minutes..":"..seconds.."")
   seconds = seconds - 1
-  if seconds > 0 and minutes < 0 then
+  if seconds < 0 and minutes > 0 then
     minutes = minutes -1
-    if minutes > 0 and hours < 0 then
+    if minutes < 0 and hours > 0 then
       hours = hours -1
     end
   end
-  print("Timer completed")
-  --(uncomment and remove this text if you are using a textlabel) script.Parent.Text = "Timer completed!"
+  wait(1)
 end
+print("Timer completed")
+--(uncomment and remove this text if you are using a textlabel) script.Parent.Text = "Timer completed!"
