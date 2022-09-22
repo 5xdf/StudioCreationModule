@@ -1,7 +1,6 @@
 local explosionpart = Instance.new("Part",workspace)
-local mesh = Instance.new("SpecialMesh")
-mesh.Parent = explosionpart
-mesh.Shape = "Ball" --if this doesn't work please message me
+explosionpart.Anchored = true
+explosionpart.Shape = "Ball"
 local colorcorrect = Instance.new("ColorCorrectionEffect")
 colorcorrect.Parent = game.Lighting
 game.TweenService:Create(explosionpart,TweenInfo.new(3,Enum.EasingStyle.Linear),{Size = Vector3.new(800,800,800)}):Play()
